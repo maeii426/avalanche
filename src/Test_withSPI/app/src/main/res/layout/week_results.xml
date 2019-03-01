@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="*"
+    android:id="@+id/tableWeekResults"
+    android:scrollIndicators="right"
+    android:nestedScrollingEnabled="true">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/NFLBlue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="greeting"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/greetingView"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/yearView"
+            android:textColor="@color/WhiteSmoke"
+            android:padding="10dp"
+            android:gravity="right"
+            android:text="year" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/NFLBlue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Week"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/weekView"
+            android:paddingBottom="10dp"
+            android:layout_span="2"
+            android:layout_gravity="center_horizontal" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/NFLLightBlue">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:textColor="@color/NFLBlue"
+            android:text="AWAY"
+            android:gravity="center"
+            android:id="@+id/awayTeam"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:id="@+id/homeTeam"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textColor="@color/NFLBlue"
+            android:text="HOME" />
+
+    </TableRow>
+
+    <ScrollView android:background="#f4f4f4">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            android:id="@+id/tableWeekGames2"
+            android:scrollIndicators="right"
+            android:nestedScrollingEnabled="true">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:maxHeight="50dp">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/rg1"
+                        android:maxHeight="50dp"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="false"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton2"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="false"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list1"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list2"
+                    android:layout_weight="2"
+                    android:layout_span="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l1"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/rg2"
+                        android:maxHeight="50dp"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton3"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton4"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats2"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list3"
+                    android:layout_weight="2"
+                    />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list4"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l2"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:maxHeight="50dp"
+                        android:id="@+id/rg3"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton5"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton6"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats3"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list5"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list6"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l3"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:maxHeight="50dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/rg4"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton7"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton8"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats4"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list7"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list8"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l4"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:maxHeight="50dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/rg5"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton9"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton10"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats5"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list9"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list10"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l5"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:maxHeight="50dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/rg6"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton11"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton12"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false" />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats6"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list11"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list12"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l6"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:maxHeight="50dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/rg7"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton13"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton14"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats7"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list13"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list14"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l7"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:maxHeight="50dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/rg8"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton15"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton16"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats8"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list15"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list16"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l8"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:maxHeight="50dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/rg9"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton17"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton18"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats9"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list17"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list18"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l9"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:maxHeight="50dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/rg10"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton19"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton20"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats10"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list19"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list20"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l10"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+
+                        android:orientation="horizontal"
+                        android:id="@+id/rg11"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton21"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton22"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats11"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list21"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list22"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l11"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+
+                        android:orientation="horizontal"
+                        android:id="@+id/rg12"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton23"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton24"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats12"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list23"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list24"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l12"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+
+                        android:orientation="horizontal"
+                        android:id="@+id/rg13"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton25"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton26"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats13"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list25"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list26"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l13"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+
+                        android:orientation="horizontal"
+                        android:id="@+id/rg14"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton27"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton28"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats14"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list27"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list28"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l14"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+
+                        android:orientation="horizontal"
+                        android:id="@+id/rg15"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton29"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton30"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats15"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list29"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list30"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l15"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="#f4f4f4" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+
+                        android:orientation="horizontal"
+                        android:id="@+id/rg16"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:text="Team 1"
+                            android:id="@+id/radioButton31"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:paddingStart="5dp"
+                            android:paddingLeft="5dp"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:text="Team 2"
+                            android:id="@+id/radioButton32"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+
+                            android:gravity="right|center_vertical"
+                            android:layout_gravity="right"
+                            android:button="@null"
+                            android:checked="false"  />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stats16"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="#f4f4f4">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="StatsGame1"
+                    android:id="@+id/list31"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/list32"
+                    android:layout_weight="2"
+                    android:text="StatsGame2" />
+
+            </TableRow>
+
+            <View android:layout_width="match_parent"
+                android:id="@+id/l16"
+                android:background="@color/NFLBlue"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="3"
+                android:gravity="center">
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="User Accuracy"
+                    android:id="@+id/userAcc"
+                    android:layout_gravity="center"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="10dp"
+                    android:layout_column="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="3"
+                android:gravity="center">
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Predictor Accuracy"
+                    android:id="@+id/predictorAcc"
+                    android:layout_gravity="center"
+                    android:paddingBottom="20dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span = "3"
+                android:gravity="center">
+
+                <Button
+                    android:text="Next Week"
+                    android:id="@+id/nextButton"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:padding="20dp"
+                    android:layout_column="0" />
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+</TableLayout>
